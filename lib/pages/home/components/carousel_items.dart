@@ -68,16 +68,37 @@ List<CarouselItemModel> carouselItems = List.generate(
                     ],
                   ),
                 ),
-               const SizedBox(
+                const SizedBox(
                   height: 25.0,
                 ),
-                MouseRegion(cursor: SystemMouseCursors.click,child: Container(),)
+                MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: kPrimaryColor,
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    height: 48.0,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 28.0,
+                    ),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: const Text("GET STARTED",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13.0,
+                              fontWeight: FontWeight.bold)),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
-          image: Container(
+          image: ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
               child: Image.asset(
-            "assets/image/profile.JPG",
-            fit: BoxFit.contain,
-          )),
+                'images/profile.JPEG',
+                fit: BoxFit.contain,
+              )),
         ));
