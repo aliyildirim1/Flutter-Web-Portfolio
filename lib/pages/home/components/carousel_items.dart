@@ -31,13 +31,47 @@ List<CarouselItemModel> carouselItems = List.generate(
                   ),
                 ),
                 const SizedBox(height: 10.0),
-               const Text(
+                const Text(
                   "Full-stack developer, based in Istanbul",
-                  style: TextStyle(color: kCaptionColor,
-                  fontSize: 15.0,
-                  height: 1.0),
+                  style: TextStyle(
+                    color: kCaptionColor,
+                    fontSize: 15.0,
+                    height: 1.0,
+                  ),
                 ),
-                  // const SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
+                Container(
+                  child: Wrap(
+                    children: [
+                      const Text(
+                        "Need a full custom website?",
+                        style: TextStyle(
+                          color: kCaptionColor,
+                          fontSize: 15.0,
+                          height: 1.5,
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: const MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: Text(
+                            "Got a project? Let's talk.",
+                            style: TextStyle(
+                              height: 1.5,
+                              color: Colors.white,
+                              fontSize: 15.0,
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+               const SizedBox(
+                  height: 25.0,
+                ),
+                MouseRegion(cursor: SystemMouseCursors.click,child: Container(),)
               ],
             ),
           ),

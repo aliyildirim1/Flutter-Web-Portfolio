@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
 class Carousel extends StatelessWidget {
-   Carousel({Key? key}) : super(key: key);
+  Carousel({Key? key}) : super(key: key);
 
-  late CarouselController carouselController;
+  CarouselController? carouselController;
 
   @override
   Widget build(BuildContext context) {
