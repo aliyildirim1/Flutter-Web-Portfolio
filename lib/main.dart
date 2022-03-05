@@ -5,13 +5,16 @@ import 'package:web_portfolio/pages/home/home.dart';
 import 'package:web_portfolio/utils/constants.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
+
 class MyApp extends StatelessWidget {
+  const MyApp({ Key? key }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+     return MaterialApp(
       title: "Flutter Portfolio",
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
@@ -26,16 +29,16 @@ class MyApp extends StatelessWidget {
           ClampingScrollWrapper.builder(context, widget!),
           defaultScale: true,
           breakpoints: [
-            ResponsiveBreakpoint.resize(450, name: MOBILE),
-            ResponsiveBreakpoint.resize(800, name: TABLET),
-            ResponsiveBreakpoint.resize(1000, name: TABLET),
-            ResponsiveBreakpoint.resize(1200, name: DESKTOP),
-            ResponsiveBreakpoint.resize(2460, name: "4K"),
+          const  ResponsiveBreakpoint.resize(450, name: MOBILE),
+          const  ResponsiveBreakpoint.resize(800, name: TABLET),
+          const  ResponsiveBreakpoint.resize(1000, name: TABLET),
+           const ResponsiveBreakpoint.resize(1200, name: DESKTOP),
+          const  ResponsiveBreakpoint.resize(2460, name: "4K"),
           ],
           background: Container(
             color: kBackgroundColor,
           )),
-      home: Home(),
+      home: const Home(),
     );
   }
 }

@@ -119,15 +119,13 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ScreenHelper(
-        desktop: Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.0),
-          child: buildHeader(),
-        ),
-        mobile: builMobileHeader(),
-        tablet: buildHeader(),
+    return ScreenHelper(
+      desktop: Padding(
+        padding:const EdgeInsets.symmetric(vertical: 8.0),
+        child: buildHeader(),
       ),
+      mobile: builMobileHeader(),
+      tablet: buildHeader(),
     );
   }
 

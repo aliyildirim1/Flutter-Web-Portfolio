@@ -4,6 +4,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:web_portfolio/pages/home/components/carousel_items.dart';
 import 'package:web_portfolio/utils/screen_helper.dart';
 
+// ignore: must_be_immutable
 class Carousel extends StatelessWidget {
   Carousel({Key? key}) : super(key: key);
 
@@ -13,7 +14,7 @@ class Carousel extends StatelessWidget {
   Widget build(BuildContext context) {
     double carouselContainerHeight = MediaQuery.of(context).size.height *
         (ScreenHelper.isMobile(context) ? .7 : .85);
-    return Container(
+    return SizedBox(
         height: carouselContainerHeight,
         width: double.infinity,
         child: Column(

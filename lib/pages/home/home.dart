@@ -53,16 +53,12 @@ class Home extends StatelessWidget {
               itemCount: headerItems.length),
         )),
       ),
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                child: Header(),
-              ),
-              Carousel(),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const Header(),
+            Carousel(),
+          ],
         ),
       ),
     );
